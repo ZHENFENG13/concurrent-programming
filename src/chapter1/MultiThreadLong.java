@@ -1,7 +1,7 @@
 package chapter1;
 
 /**
- * Created by shuaihan on 2017/5/4.
+ * Created by 13 on 2017/5/4.
  */
 public class MultiThreadLong {
     public static long t = 0;

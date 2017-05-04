@@ -1,7 +1,7 @@
 package chapter2;
 
 /**
- * Created by shuaihan on 2017/5/4.
+ * Created by 13 on 2017/5/4.
  */
 public class JoinMain {
     public volatile static int i = 0;
