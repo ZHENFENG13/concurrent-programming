@@ -21,9 +21,9 @@ public class LockSupportIntDemo {
                 LockSupport.park();
                 if (Thread.interrupted()) {
                 }
-                System.out.println(getName() + "±»ÖÐ¶ÏÁË");
+                System.out.println(getName() + "è¢«ä¸­æ–­");
             }
-            System.out.println(getName() + "Ö´ÐÐ½áÊø");
+            System.out.println(getName() + "ç»§ç»­æ‰§è¡Œ");
         }
     }
 
