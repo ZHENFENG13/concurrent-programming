@@ -19,7 +19,7 @@ public class ExtThreadPool {
 
         @Override
         public void run() {
-            System.out.println("ÕıÔÚÖ´ĞĞ:Thread ID:" + Thread.currentThread().getId() + ",Task Name:" + name);
+            System.out.println("æ­£åœ¨æ‰§è¡Œ:Thread ID:" + Thread.currentThread().getId() + ",Task Name:" + name);
 
             try {
                 Thread.sleep(100);
@@ -33,15 +33,15 @@ public class ExtThreadPool {
     public static void main(String args[]) throws InterruptedException {
         ExecutorService executorService = new ThreadPoolExecutor(5, 5, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<Runnable>()) {
             protected void beforeExecute(Thread t, Runnable r) {
-                System.out.println("×¼±¸Ö´ĞĞ:" + ((MyTask) r).name);
+                System.out.println("å‡†å¤‡æ‰§è¡Œ:" + ((MyTask) r).name);
             }
 
-            protected void afterExecute(Thread t, Runnable r) {
-                System.out.println("Ö´ĞĞÍê³É:" + ((MyTask) r).name);
+            protected void afterExecute(Runnable r,Throwable t) {
+                System.out.println("æ‰§è¡Œå®Œæˆ:" + ((MyTask) r).name);
             }
 
             protected void terminated() {
-                System.out.println("Ïß³Ì³ØÍË³ö!");
+                System.out.println("çº¿ç¨‹æ± é€€å‡º!");
             }
         };
 
